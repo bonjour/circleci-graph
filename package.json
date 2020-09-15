@@ -1,12 +1,14 @@
 {
-  "name": "circleci-graph",
+  "name": "@bonjourio/circleci-graph",
   "description": "Generate a Dot Dump to copy-paste in a graphviz application",
   "version": "0.0.0",
   "author": "Jonathan Beurel @jbeurel",
   "bin": {
-    "circleci-graph": "./bin/run"
+    "circleci-graph": "bin/run"
   },
-  "bugs": "https://github.com/bonjour/circleci-graph/issues",
+  "bugs": {
+    "url": "https://github.com/bonjour/circleci-graph/issues"
+  },
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
@@ -41,11 +43,17 @@
   "oclif": {
     "bin": "circleci-graph"
   },
-  "repository": "bonjour/circleci-graph",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bonjour/circleci-graph.git"
+  },
   "scripts": {
     "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  }
 }
